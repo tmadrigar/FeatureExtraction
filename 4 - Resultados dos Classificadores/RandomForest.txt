@@ -1,0 +1,50 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -store-out-of-bag-predictions -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1 -B
+Relation:     exported
+Instances:    500
+Attributes:   734
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -B -do-not-check-capabilities
+
+Time taken to build model: 0.53 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         360               72      %
+Incorrectly Classified Instances       140               28      %
+Kappa statistic                          0.65  
+Mean absolute error                      0.2312
+Root mean squared error                  0.3136
+Relative absolute error                 72.235  %
+Root relative squared error             78.3913 %
+Total Number of Instances              500     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0,640    0,075    0,681      0,640    0,660      0,578    0,859     0,714     bart_simpson
+                 0,690    0,103    0,627      0,690    0,657      0,567    0,893     0,724     homer_simpson
+                 0,890    0,035    0,864      0,890    0,877      0,846    0,980     0,923     lisa_simpson
+                 0,600    0,060    0,714      0,600    0,652      0,578    0,857     0,742     maggie_simpson
+                 0,780    0,078    0,716      0,780    0,746      0,681    0,940     0,827     marge_simpson
+Weighted Avg.    0,720    0,070    0,720      0,720    0,718      0,650    0,906     0,786     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+ 64 16  2  8 10 |  a = bart_simpson
+ 11 69  3  7 10 |  b = homer_simpson
+  5  3 89  2  1 |  c = lisa_simpson
+  9 14  7 60 10 |  d = maggie_simpson
+  5  8  2  7 78 |  e = marge_simpson
+
